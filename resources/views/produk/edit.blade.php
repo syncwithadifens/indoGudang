@@ -54,8 +54,7 @@ IndoGudang | Ubah Data Produk
         <div class="row">
             <div class="mb-3 col-lg-5">
                 <label for="gambar" class="form-label">Gambar Produk</label>
-                <input type="file" class="bg-white form-control @error('gambar') is-invalid @enderror" name="gambar"
-                    value="{{ $produk->gambar }}">
+                <input type="file" class="bg-white form-control @error('gambar') is-invalid @enderror" name="gambar">
                 @error('gambar')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
