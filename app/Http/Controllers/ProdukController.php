@@ -99,8 +99,6 @@ class ProdukController extends Controller
         ]);
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('img');
-        } else {
-            $file = '';
         }
         $produk->update([
             'nama_barang' => $request->input('nama_barang'),
