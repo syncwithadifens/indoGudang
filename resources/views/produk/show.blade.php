@@ -23,7 +23,7 @@ IndoGudang | Detail Produk
         <dt>Supplier</dt>
         <dd>{{ $produk->supplier }}</dd>
 
-        <dt>Harga</dt>
+        <dt>Harga Satuan</dt>
         <dd>{{ $produk->harga }}</dd>
 
         <dt>Jumlah Stok</dt>
