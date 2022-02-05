@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Produk;
 use DateTime;
-use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 
 class ProdukSeeder extends Seeder
 {
@@ -16,15 +16,16 @@ class ProdukSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 50; $i++) {
-            DB::table('produk')->insert([
-                'nama_barang' => Str::random(10),
-                'supplier' => Str::random(10),
-                'harga' => rand(1000, 100000),
-                'stok' => rand(0, 100),
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-            ]);
+        $faker = Faker::create('id_ID');
+        for ($i = 1; $i <= 50; $i++) {
+            $ps = new Produk();
+            $ps->nama_barang = $faker->jobTitle();
+            $ps->supplier = $faker->company();
+            $ps->harga = rand(1000, 200000);
+            $ps->stok = rand(10, 100);
+            $ps->created_at = new DateTime();
+            $ps->updated_at = new DateTime();
+            $ps->save();
         }
     }
 }

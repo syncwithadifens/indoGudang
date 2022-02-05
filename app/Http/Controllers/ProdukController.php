@@ -15,7 +15,14 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $data = Produk::paginate(8);
+        $data = Produk::latest()->paginate(8);
+        return view('produk.index', compact('data'));
+    }
+
+    public function cari(Request $request)
+    {
+        $keyword = $request->input('cari');
+        $data = Produk::where('nama_barang', 'like', "%" . $keyword . "%")->paginate(8);
         return view('produk.index', compact('data'));
     }
 

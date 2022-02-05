@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/produk/search', [ProdukController::class, 'cari']);
 Route::resource('produk', ProdukController::class);

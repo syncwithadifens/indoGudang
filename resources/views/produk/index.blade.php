@@ -8,7 +8,7 @@ IndoGudang | Semua Produk
 <div class="row mb-2">
     <div class="col-lg-12">
         <h3 class="float-left">Daftar Semua Produk di Gudang Indomaret</h3>
-        <a href="produk/create" class="col-md-2 btn btn-primary float-right">Tambah</a>
+        <a href="produk/create" class="col-md-2 btn btn-primary float-right">Tambah Data</a>
     </div>
 </div>
 @if (session('status'))
@@ -20,6 +20,12 @@ IndoGudang | Semua Produk
 </div>
 @endif
 <hr>
+<form action="search" method="get">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Cari barang.." name="cari">
+        <button class="btn btn-dark" type="submit">Cari</button>
+    </div>
+</form>
 <div class="row my-3">
     @foreach ($data as $d)
     <div class="col-6 col-md-4 col-lg-3 mb-4">
