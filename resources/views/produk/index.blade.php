@@ -5,15 +5,18 @@ IndoGudang | Semua Produk
 @endsection
 
 @section('content')
-<div class="row">
+<div class="row mb-2">
     <div class="col-lg-12">
         <h3 class="float-left">Daftar Produk di IndoGudang</h3>
         <a href="produk/create" class="col-md-2 btn btn-primary float-right">Tambah</a>
     </div>
 </div>
 @if (session('status'))
-<div class="alert alert-success">
-    {{ session('status') }}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{ session('status') }}!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 @endif
 <hr>

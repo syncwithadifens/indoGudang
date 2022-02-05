@@ -95,7 +95,7 @@ class ProdukController extends Controller
             'supplier' => 'required',
             'harga' => 'required|numeric',
             'stok' => 'required|numeric',
-            'gambar' => 'image',
+            'gambar' => 'required|image',
         ]);
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('img');
