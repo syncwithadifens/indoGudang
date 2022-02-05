@@ -27,7 +27,7 @@ IndoGudang | Detail Produk
         <dd>Rp{{ $produk->harga }}</dd>
 
         <dt>Jumlah Stok</dt>
-        <dd>{{ $produk->stok }} Kardus</dd>
+        <dd>{{ $produk->stok }} kardus</dd>
     </dl>
     <a href="/produk" class="btn btn-outline-secondary">Kembali</a>
 </div>

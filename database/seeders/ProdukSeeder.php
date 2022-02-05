@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use DateTime;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,11 +16,15 @@ class ProdukSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('produk')->insert([
-            'nama_barang' => 'Chocolatos',
-            'supplier' => 'Coklat Company',
-            'harga' => 10000,
-            'stok' => 18,
-        ]);
+        for ($i = 0; $i < 50; $i++) {
+            DB::table('produk')->insert([
+                'nama_barang' => Str::random(10),
+                'supplier' => Str::random(10),
+                'harga' => rand(1000, 100000),
+                'stok' => rand(0, 100),
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+            ]);
+        }
     }
 }

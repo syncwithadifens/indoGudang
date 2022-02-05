@@ -49,4 +49,5 @@ IndoGudang | Semua Produk
     </div>
     @endforeach
 </div>
+{{ $data->links() }}
 @endsection

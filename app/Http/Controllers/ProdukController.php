@@ -15,7 +15,7 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $data = Produk::all();
+        $data = Produk::paginate(8);
         return view('produk.index', compact('data'));
     }
 
