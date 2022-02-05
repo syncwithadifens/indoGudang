@@ -33,6 +33,15 @@ class ProdukSeeder extends Seeder
         $ps1->updated_at = new DateTime();
         $ps1->save();
 
+        $ps9 = new Produk();
+        $ps9->nama_barang = 'Sarimi';
+        $ps9->supplier = 'PT Indofood Sukses Makmur Tbk';
+        $ps9->harga = 3000;
+        $ps9->stok = 70;
+        $ps9->created_at = new DateTime();
+        $ps9->updated_at = new DateTime();
+        $ps9->save();
+
         $ps2 = new Produk();
         $ps2->nama_barang = 'Sprite';
         $ps2->supplier = 'The Coca Cola Company';
@@ -41,6 +50,15 @@ class ProdukSeeder extends Seeder
         $ps2->created_at = new DateTime();
         $ps2->updated_at = new DateTime();
         $ps2->save();
+
+        $ps5 = new Produk();
+        $ps5->nama_barang = 'Mie Sedaap';
+        $ps5->supplier = 'Wings Food';
+        $ps5->harga = 2000;
+        $ps5->stok = 100;
+        $ps5->created_at = new DateTime();
+        $ps5->updated_at = new DateTime();
+        $ps5->save();
 
         $ps3 = new Produk();
         $ps3->nama_barang = 'Kacang Garuda';
@@ -59,15 +77,6 @@ class ProdukSeeder extends Seeder
         $ps4->created_at = new DateTime();
         $ps4->updated_at = new DateTime();
         $ps4->save();
-
-        $ps5 = new Produk();
-        $ps5->nama_barang = 'Mie Sedaap';
-        $ps5->supplier = 'Wings Food';
-        $ps5->harga = 2000;
-        $ps5->stok = 100;
-        $ps5->created_at = new DateTime();
-        $ps5->updated_at = new DateTime();
-        $ps5->save();
 
         $ps6 = new Produk();
         $ps6->nama_barang = 'Bimoli';
@@ -88,21 +97,12 @@ class ProdukSeeder extends Seeder
         $ps7->save();
 
         $ps8 = new Produk();
-        $ps8->nama_barang = 'HOTWHEELS INVISIBLE BOAT';
+        $ps8->nama_barang = 'HotWheels Invisible Boat';
         $ps8->supplier = 'Mattel';
         $ps8->harga = 92000;
         $ps8->stok = 2;
         $ps8->created_at = new DateTime();
         $ps8->updated_at = new DateTime();
         $ps8->save();
-
-        $ps9 = new Produk();
-        $ps9->nama_barang = 'Sarimi';
-        $ps9->supplier = 'PT Indofood Sukses Makmur Tbk';
-        $ps9->harga = 3000;
-        $ps9->stok = 70;
-        $ps9->created_at = new DateTime();
-        $ps9->updated_at = new DateTime();
-        $ps9->save();
     }
 }

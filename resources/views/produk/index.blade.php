@@ -20,7 +20,7 @@ IndoGudang | Semua Produk
 </div>
 @endif
 <hr>
-<form action="search" method="get">
+<form action="/produk/search" method="get">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Cari barang.." name="cari">
         <button class="btn btn-dark" type="submit">Cari</button>
@@ -29,7 +29,7 @@ IndoGudang | Semua Produk
 <div class="row my-3">
     @foreach ($data as $d)
     <div class="col-6 col-md-4 col-lg-3 mb-4">
-        <div class="card" style="max-height: 300px; overflow: hidden;">
+        <div class="card" style="max-height: 350px; overflow: hidden;">
             @if ($d->gambar)
             <img class="card-img-top" src="{{ Storage::url($d->gambar) }}" alt="Card image cap"
                 style="width: 100%; overflow: hidden;">
