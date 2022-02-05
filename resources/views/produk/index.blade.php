@@ -7,7 +7,7 @@ IndoGudang | Semua Produk
 @section('content')
 <div class="row mb-2">
     <div class="col-lg-12">
-        <h3 class="float-left">Daftar Produk di IndoGudang</h3>
+        <h3 class="float-left">Daftar Semua Produk di Gudang Indomaret</h3>
         <a href="produk/create" class="col-md-2 btn btn-primary float-right">Tambah</a>
     </div>
 </div>

@@ -24,10 +24,10 @@ IndoGudang | Detail Produk
         <dd>{{ $produk->supplier }}</dd>
 
         <dt>Harga Satuan</dt>
-        <dd>{{ $produk->harga }}</dd>
+        <dd>Rp{{ $produk->harga }}</dd>
 
         <dt>Jumlah Stok</dt>
-        <dd>{{ $produk->stok }}</dd>
+        <dd>{{ $produk->stok }} Kardus</dd>
     </dl>
     <a href="/produk" class="btn btn-outline-secondary">Kembali</a>
 </div>
