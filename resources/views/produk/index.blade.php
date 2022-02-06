@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('title')
 IndoGudang | Semua Produk
@@ -7,8 +7,8 @@ IndoGudang | Semua Produk
 @section('content')
 <div class="row mb-2">
     <div class="col-lg-12">
-        <h3 class="float-left">Daftar Semua Produk di Gudang Indomaret</h3>
-        <a href="produk/create" class="col-md-2 btn btn-primary float-right">Tambah Data</a>
+        <h3 class="float-start">Daftar Semua Produk di Gudang Indomaret</h3>
+        <a href="produk/create" class="col-md-2 btn btn-primary float-end">Tambah Data</a>
     </div>
 </div>
 @if (session('status'))
@@ -26,6 +26,12 @@ IndoGudang | Semua Produk
         <button class="btn btn-dark" type="submit">Cari</button>
     </div>
 </form>
+@if ($data->isEmpty())
+<div class="container text-center">
+    <img src="https://www.airliquidealkhafrah.sa/assets/web/images/products/empty.png" alt="kosong">
+    <h3>Barang yang anda cari tidak ada.</h3>
+</div>
+@endif
 <div class="row my-3">
     @foreach ($data as $d)
     <div class="col-6 col-md-4 col-lg-3 mb-4">
