@@ -8,7 +8,8 @@ IndoGudang | Semua Produk
 <div class="row mb-2">
     <div class="col-lg-12">
         <h3 class="float-start">Daftar Semua Produk di Gudang Indomaret</h3>
-        <a href="produk/create" class="col-md-2 btn btn-primary float-end">Tambah Data</a>
+        <a href="produk/create" class="col-md-2 btn btn-primary float-end"><i class="fa fa-plus-square me-2"></i>Tambah
+            Data</a>
     </div>
 </div>
 @if (session('status'))
@@ -23,7 +24,7 @@ IndoGudang | Semua Produk
 <form action="/produk/search" method="get">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Cari barang.." name="cari">
-        <button class="btn btn-dark" type="submit">Cari</button>
+        <button class="btn btn-dark" type="submit"><i class="fa fa-search"></i></button>
     </div>
 </form>
 @if ($data->isEmpty())
@@ -47,13 +48,14 @@ IndoGudang | Semua Produk
             <div class="card-body">
                 <h5 class="card-title">{{ $d->nama_barang }}</h5>
                 <p class="card-text">Stok tersedia: {{ $d->stok }} kardus</p>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <a href="/produk/{{ $d->id }}" class="btn btn-outline-secondary">Detail</a>
-                    <a href="/produk/{{ $d->id }}/edit" class="btn btn-outline-warning mx-2">Ubah</a>
+                <div class="btn-group d-flex justify-content-center" role="group" aria-label="Basic outlined example">
+                    <a href="/produk/{{ $d->id }}" class="btn btn-outline-secondary"><i class="fa fa-eye"></i>Detail</a>
+                    <a href="/produk/{{ $d->id }}/edit" class="btn btn-outline-warning mx-2"><i
+                            class="fa fa-pencil"></i>Ubah</a>
                     <form action="/produk/{{ $d->id }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-outline-danger">Hapus</button>
+                        <button type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Hapus</button>
                     </form>
                 </div>
             </div>
