@@ -5,7 +5,7 @@ Project ini dibuat untuk UAS matakuliah pemrograman web lanjut. IndoGudang merup
 Persyaratan UAS yang sudah terpenuhi:
 
 -   [x] Login dan Registration
--   [] Sediakan 2 macam lang, default en dan id
+-   [ ] Sediakan 2 macam lang, default en dan id
 -   [x] Form Validator
 -   [x] Database Migration dan Seeding
 -   [x] Eloquent ORM untuk CRUD dengan Controller Resource
