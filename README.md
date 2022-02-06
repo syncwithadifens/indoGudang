@@ -1,6 +1,16 @@
 # IndoGudang
 
-Project ini dibuat untuk UAS matakuliah pemrograman web. IndoGudang merupakan sistem pengelolaan data gudang CRUD (Create, Read, Update, Delete).
+Project ini dibuat untuk UAS matakuliah pemrograman web lanjut. IndoGudang merupakan sistem pengelolaan data gudang yang didalamnya terdapat CRUD (Create, Read, Update, Delete).
+
+Persyaratan UAS yang sudah terpenuhi:
+
+-   [x] Login dan Registration
+-   [] Sediakan 2 macam lang, default en dan id
+-   [x] Form Validator
+-   [x] Database Migration dan Seeding
+-   [x] Eloquent ORM untuk CRUD dengan Controller Resource
+-   [x] Pagination
+-   [x] Percantik tampilan dengan Bootstrap dan Font Awesome
 
 ## Preview
 
